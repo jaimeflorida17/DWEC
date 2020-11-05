@@ -28,14 +28,14 @@ button{
 
 
     }
-    
+
     button{
         padding: 2em;
         background-color: green;
     }
 }
 
-@media screen and (max-width:650px) and (min-width:1281px) {
+@media screen and (min-width:650px) and (max-width:1290px) {
     body{
         display: flex;
         text-align: center;
@@ -48,5 +48,40 @@ button{
         padding: 2em;
         background-color: green;
         border-radius: 5px;
+    }
+
+    button:hover{
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width:1290px){
+    body{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        background-color: black;
+        color: white;
+
+    }
+ 
+    #cap1{
+        height: 50vh;
+        
+    }
+
+    #cap2
+    #cap3{
+        height: 25vh;
+    }
+}
+
+@media print {
+    body {
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+    button {
+        display: none;
     }
 }
