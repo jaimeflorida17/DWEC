@@ -34,3 +34,19 @@ button{
         background-color: green;
     }
 }
+
+@media screen and (max-width:650px) and (min-width:1281px) {
+    body{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+
+    }
+    button{
+        padding: 2em;
+        background-color: green;
+        border-radius: 5px;
+    }
+}
