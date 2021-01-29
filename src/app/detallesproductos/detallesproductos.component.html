@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h2>Productos:</h2>
+    </div>
+    <div *ngFor="let pr of productos; let i = index">
+        <div *ngIf="pr.id == getId">
+            <p>ID: {{pr.id}}</p>
+            <p>Nombre: {{pr.name}}</p>
+            <p>Descripción: {{pr.description}}</p>
+            <p>Precio: {{pr.precio}}</p>
+            <p>Imagen: {{pr.imagen}}</p>
+            <button class="btn-sm btn-primary" routerLink='/productos'>Volver</button>
+            <button class="btn-remove btn-sm btn-primary" (click)='delete(productos.id,i)'>Eliminar</button>
+        </div>
+    </div>
+</div>

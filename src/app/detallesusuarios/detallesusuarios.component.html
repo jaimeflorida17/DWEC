@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h2>Usuarios:</h2>
+    </div>
+    <div *ngFor="let user of usuarios; let i = index">
+        <div *ngIf="user.id == getId">
+            <p>ID: {{user.id}}</p>
+            <p>Nombre: {{user.username}}</p>
+            <p>Password: {{user.password}}</p>
+            <button class="btn-sm btn-primary" routerLink='/usuarios'>Volver</button>
+        </div>
+    </div>
+</div>

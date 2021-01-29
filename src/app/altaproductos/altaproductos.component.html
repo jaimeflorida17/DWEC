@@ -1,0 +1,44 @@
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+        <form [formGroup]="productosForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Nombre</label>
+                <input class="form-control" type="text" formControlName="name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Descripcion</label>
+                <input class="form-control" type="text" formControlName="description" required>
+            </div>
+
+            <div class="form-group">
+                <label>Precio</label>
+                <input class="form-control" type="text" formControlName="precio" required>
+            </div>
+
+            <div class="form-group">
+                <label>Imagen</label>
+                <input class="form-control" type="text" formControlName="imagen" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Categorias</label>
+                <input class="form-control" type="text" formControlName="categorias" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label>Type</label>
+                <input class="form-control" type="text" formControlName="type" required>
+            </div>
+
+
+            <div class="form-group">
+                <button class="btn btn-dark text-white btn-block" type="submit">Añadir</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a routerLink='/productos'>Volver</a>
+</div>

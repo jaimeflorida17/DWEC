@@ -1,0 +1,32 @@
+
+<div class="container">
+    <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h2 class="h2">Usuarios</h2>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">USERNAME</th>
+                    <th scope="col">PASSWORD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pr of Usuarios; let i = index">
+                    <th scope="row">{{pr.username}}</th>
+                    <td>{{pr.password}}</td>
+                    <button class="btn btn-sm btn-primary btn-detail" routerLink="/detalleUsuarios/{{pr.id}}">
+                        detalles </button>
+                    <button class="btn btn-sm btn-danger" (click)="delete(pr.id, i)">
+                        delete
+                    </button>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <button class=""  routerLinkActive="active" routerLink="/altaUsuarios">Añadir</button>
+    </div>
+</div>
